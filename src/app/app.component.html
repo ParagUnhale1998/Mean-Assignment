@@ -1,25 +1,22 @@
-<div>
-  <select [(ngModel)]="selectedCountry" (change)="updateChart(selectedCountry)">
-    <option *ngFor="let country of allCountries" [value]="country">{{ country }}</option>
-  </select>
-  <canvas id="myChart" width="400" height="400"></canvas>
-  <br>
-  <br>
-  <canvas id="myChart1" width="400" height="400"></canvas>
-  <br>
-  <br>
-  <canvas id="myChart2" width="400" height="400"></canvas>
+<div class="dashboard-container">
+  <h1>Visualization Dashboard
+  </h1>
+  <div class="select-country">
+    <select [(ngModel)]="selectedCountry" (change)="updateChart(selectedCountry)">
+      <option *ngFor="let country of allCountries" [value]="country">{{ country }}</option>
+    </select>
+  </div>
 
+  <div class="chart-container">
+    <div class="cart"><canvas id="myChartBar"></canvas></div>
+    <div class="cart"><canvas id="myChart2bar"></canvas></div>
+    <div class="cart"><canvas id="myChart4Line"></canvas></div>
+    <div class="cart"><canvas id="myChart5Bar"></canvas></div>
+    <div class="cart"><canvas id="myChart1Pie"></canvas></div>
+    <div class="cart"><canvas id="myChart3PolarArea"></canvas></div>
+
+
+
+    
+  </div>
 </div>
-
-
-<!-- <div>
-  <h2>Dashboard</h2>
-  <label for="category">Select Category:</label>
-  <select id="category" [(ngModel)]="selectedCategory" (change)="onCategoryChange($event)">
-    <option value="topic">likelihood</option>
-    <option value="sector">Sector</option>
- Add more options based on your data properties -->
-  <!-- </select> -->
-  <!-- <canvas id="myChart" width="400" height="400"></canvas> -->
-<!-- </div> --> 
