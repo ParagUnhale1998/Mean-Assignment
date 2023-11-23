@@ -140,7 +140,9 @@ export class AppComponent {
           // backgroundColor:colors,
           backgroundImage:colors
           
-        }],
+        }
+      
+      ],
       },
       options: {
         scales: {
@@ -149,6 +151,7 @@ export class AppComponent {
           }
         },
         responsive: true
+        
       }
     });
    }
